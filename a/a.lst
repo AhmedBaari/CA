@@ -1,0 +1,31 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 area             a, code, readonly
+    2 00000000                 entry
+    3 00000000 E3A00002        mov              r0,#02
+    4 00000004 E3A01004        mov              r1,#04
+    5 00000008 E0800001        add              r0,r0,r1
+    6 0000000C                 end
+Command Line: --debug --xref --apcs=interwork --depend=a.d -oa.o -IC:\Keil_v5\A
+RM\RV31\INC -IC:\Keil_v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM\Inc\Philips --list=
+a.lst a.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+a 00000000
+
+Symbol: a
+   Definitions
+      At line 1 in file a.s
+   Uses
+      None
+Comment: a unused
+1 symbol
+331 symbols in table

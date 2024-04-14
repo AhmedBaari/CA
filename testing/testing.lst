@@ -1,0 +1,30 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 area             testing, code, readonly
+    2 00000000 E3A00002        mov              r0, #02
+    3 00000004 E3A01004        mov              r1, #04
+    4 00000008 E0800001        add              r0,r0,r1
+    5 0000000C                 end
+Command Line: --debug --xref --apcs=interwork --depend=testing.d -otesting.o -I
+C:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM\Inc\Phi
+lips --list=testing.lst testing.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+testing 00000000
+
+Symbol: testing
+   Definitions
+      At line 1 in file testing.s
+   Uses
+      None
+Comment: testing unused
+1 symbol
+331 symbols in table

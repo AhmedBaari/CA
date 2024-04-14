@@ -1,0 +1,1 @@
+.\evenodd.o: evenOdd.s

@@ -1,0 +1,1 @@
+.\binarysearch.o: binarysearch.s

@@ -1,0 +1,69 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 area             factorial, code, readonly
+    2 00000000         start
+    3 00000000 E3A00101        LDR              r0, =0x40000000
+    4 00000004 E5901000        LDR              r1, [r0]    ; Get the number
+    5 00000008         
+    6 00000008 E3A05001        MOV              r5, #1      ; the storage of X 
+                                                            for X * (n-1)
+    7 0000000C         
+    8 0000000C         loop
+    9 0000000C E3510001        CMP              r1, #1
+   10 00000010 DA000001        BLE              stop        ; STOP condition - 
+                                                            1
+   11 00000014         
+   12 00000014 E0050591        MUL              r5, r1, r5  ; X * (n-1)
+   13 00000018 E2411001        SUB              r1, r1, #1  ; Reduce n by -1 ->
+                                                             (n-1)
+   14 0000001C         
+   15 0000001C         stop
+   16 0000001C E5805004        STR              r5, [r0,#4]
+   17 00000020                 end
+Command Line: --debug --xref --apcs=interwork --depend=.\factorial.d -o.\factor
+ial.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM
+\Inc\Philips --predefine="__EVAL SETA 1" --list=.\factorial.lst factorial.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+factorial 00000000
+
+Symbol: factorial
+   Definitions
+      At line 1 in file factorial.s
+   Uses
+      None
+Comment: factorial unused
+loop 0000000C
+
+Symbol: loop
+   Definitions
+      At line 8 in file factorial.s
+   Uses
+      None
+Comment: loop unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 2 in file factorial.s
+   Uses
+      None
+Comment: start unused
+stop 0000001C
+
+Symbol: stop
+   Definitions
+      At line 15 in file factorial.s
+   Uses
+      At line 10 in file factorial.s
+Comment: stop used once
+4 symbols
+335 symbols in table

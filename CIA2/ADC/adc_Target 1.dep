@@ -1,0 +1,4 @@
+Dependencies for Project 'adc', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x5209CE98)()
+F (.\adc.c)(0x661BE123)()
+I (C:\Keil_v5\ARM\Inc\Philips\LPC214x.h)(0x5209CD6C)

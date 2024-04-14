@@ -1,0 +1,2 @@
+Dependencies for Project 'a', Target 'Target 1': (DO NOT MODIFY !)
+F (.\lineasearch.s)(0x65DB792A)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Philips--list .\lineasearch.lst --xref -o .\lineasearch.o --depend .\lineasearch.d)

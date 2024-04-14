@@ -1,0 +1,71 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 area             test,code,readonly
+    2 00000000         start
+    3 00000000 E3A00101        LDR              r0, =0x40000000
+    4 00000004         
+    5 00000004         ; I want to load r1-r4
+    6 00000004 E8B0001E        LDMIA            r0!, {r1-r4}
+    7 00000008         
+    8 00000008         ; r1 = a, r2 = b, r3 = c, r4 = x
+    9 00000008         
+   10 00000008         ; b * x
+   11 00000008 E0020294        MUL              r2,r4,r2    ;
+   12 0000000C         
+   13 0000000C         ; bx + c
+   14 0000000C E0822003        ADD              r2,r2,r3
+   15 00000010         
+   16 00000010         ; ax
+   17 00000010 E0010194        MUL              r1,r4,r1
+   18 00000014         
+   19 00000014         ; ax^2
+   20 00000014 E0010194        MUL              r1, r4, r1
+   21 00000018         
+   22 00000018         ; ax^2 + bx + c
+   23 00000018 E0811002        ADD              r1,r1,r2
+   24 0000001C         
+   25 0000001C         ; Store result in mem
+   26 0000001C E5801000        STR              r1, [r0]
+   27 00000020         
+   28 00000020 EAFFFFFE 
+                       L       B                L
+   29 00000024                 end
+Command Line: --debug --xref --apcs=interwork --depend=.\test.d -o.\test.o -IC:
+\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM\Inc\Phili
+ps --predefine="__EVAL SETA 1" --list=.\test.lst test.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+L 00000020
+
+Symbol: L
+   Definitions
+      At line 28 in file test.s
+   Uses
+      At line 28 in file test.s
+Comment: L used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 2 in file test.s
+   Uses
+      None
+Comment: start unused
+test 00000000
+
+Symbol: test
+   Definitions
+      At line 1 in file test.s
+   Uses
+      None
+Comment: test unused
+3 symbols
+334 symbols in table

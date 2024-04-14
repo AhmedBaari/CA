@@ -1,0 +1,1 @@
+.\sumofseries.o: sumofseries.s

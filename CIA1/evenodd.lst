@@ -1,0 +1,42 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 area             evenodd, code, readonly
+    2 00000000         start
+    3 00000000 E3A00101        LDR              r0, =0x40000000
+    4 00000004 E5B01004        LDR              r1, [r0, #0x4]!
+    5 00000008         
+    6 00000008 E2012001        AND              r2,r1,#1
+    7 0000000C         
+    8 0000000C E5802000        STR              R2, [R0]
+    9 00000010                 end
+Command Line: --debug --xref --apcs=interwork --depend=.\evenodd.d -o.\evenodd.
+o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM\Inc
+\Philips --predefine="__EVAL SETA 1" --list=.\evenodd.lst evenOdd.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+evenodd 00000000
+
+Symbol: evenodd
+   Definitions
+      At line 1 in file evenOdd.s
+   Uses
+      None
+Comment: evenodd unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 2 in file evenOdd.s
+   Uses
+      None
+Comment: start unused
+2 symbols
+333 symbols in table

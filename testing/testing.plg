@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+B:\LEARNING\CA\testing\testing.uvproj
+Project File Date:  02/03/2024
+
+<h2>Output:</h2>
+Build target 'Target 1'
+Target has no object modules
+Target not created
+Build target 'Target 1'
+assembling testing.asm...
+testing.asm(1): error: A1163E: Unknown opcode testing, , expecting opcode or Macro
+testing.asm(2): error: A1105E: Area directive missing
+testing.asm(2): warning: A1088W: Faking declaration of area AREA |$$$$$$$|
+Target not created
+Build target 'Target 1'
+assembling testing.asm...
+linking...
+testing.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"testing.axf" - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling testing.s...
+linking...
+testing.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"testing.axf" - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling testing.s...
+linking...
+testing.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"testing.axf" - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+testing.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"testing.axf" - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling testing.s...
+linking...
+testing.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"testing.axf" - 1 Error(s), 0 Warning(s).
